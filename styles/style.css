@@ -138,6 +138,7 @@
 .card__img-section {
   position: relative;
   border-block-end: 2px solid var(--accent-color);
+  overflow: hidden;
 }
 
 .img-section__label {
@@ -149,7 +150,6 @@
   font-family: var(--font-accent);
   opacity: 50%;
   mix-blend-mode: hard-light;
-  text-transform: uppercase;
   -webkit-text-stroke: 1px var(--main-color);
   z-index: 1;
 }
@@ -178,7 +178,6 @@
   justify-content: end;
   align-items: center;
   padding-inline: 25px;
-
 }
 
 .button {
@@ -253,12 +252,29 @@
 .filter_saturate {
   filter: saturate(25%);
 }
+.filter_sepia {
+  filter: sepia(70%);
+}
+
+.filter_invert {
+  filter: invert(75%);
+}
+.filter_blur {
+  filter: blur(10px);
+}
+.filter_contrast {
+  filter: contrast(150%);
+}
+.filter_brightness {
+  filter: brightness(0.6);
+}
+.filter_hue-invert {
+  filter: hue-rotate(90deg) invert(75%);;
+}
 
 .like-icon {
-
   inline-size: 39px;
   box-sizing: border-box;
-
 }
 
 .sparks {
