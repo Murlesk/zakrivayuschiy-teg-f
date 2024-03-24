@@ -18,6 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main, sans-serif);
+  font-variation-settings: "wght" var(--font-weight-normal, 400);
   background-color: var(--main-color);
   background-image: var(--background-image-gradient);
   color: var(--accent-color);
@@ -76,12 +77,16 @@
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 60%;
-  transition: 0.3s ease;
+  transition: var(--transition-button);
 }
 
 .theme-menu__button:disabled {
   pointer-events: none;
   opacity: 60%;
+}
+
+.theme-menu__button:focus {
+  outline: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -131,6 +136,7 @@
 .card__title {
   line-height: 19px;
   font-size: 18px;
+  font-variation-settings: "wght" var(--font-weight-bold);
   padding: 6px 10px;
   border-block-end: 2px solid var(--accent-color);
 }
@@ -150,7 +156,8 @@
   font-family: var(--font-accent);
   opacity: 50%;
   mix-blend-mode: hard-light;
-  text-shadow: 1px 1px var(--main-color), -1px -1px var(--main-color), 1px -1px var(--main-color), -1px 1px var(--main-color);
+  text-shadow: 1px 1px var(--main-color), -1px -1px var(--main-color),
+    1px -1px var(--main-color), -1px 1px var(--main-color);
   z-index: 1;
 }
 
@@ -158,6 +165,7 @@
   display: block;
   inline-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .card__text-section {
@@ -185,6 +193,9 @@
   position: relative;
   background-color: var(--main-color);
   border: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button::before {
@@ -210,9 +221,6 @@
 }
 
 .card__like-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 130px;
   height: 38px;
 }
@@ -227,7 +235,7 @@
 
 .card__like-button:focus-visible {
   outline: none;
-  transition: 0.5s ease;
+  transition: var(--transition-button);
   box-shadow: 2px 2px var(--accent-color);
 }
 
@@ -236,7 +244,7 @@
   height: 38px;
   background: var(--accent-colory);
   border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  transition: border-color var(--transition-button);
   appearance: none;
   cursor: pointer;
   padding: 0;
@@ -293,10 +301,7 @@
 }
 
 .save-button {
-  display: flex;
   padding: 15px 20px;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
 }
 
@@ -306,7 +311,17 @@
 
 .save-button:focus-visible {
   outline: none;
-  transition: 0.5s ease;
+  transition: var(--transition-button);
+  box-shadow: 2px 2px var(--accent-color);
+}
+
+.dialo__button:focus {
+  outline: none;
+}
+
+.dialog__button:focus-visible {
+  outline: none;
+  transition: var(--transition-button);
   box-shadow: 2px 2px var(--accent-color);
 }
 
@@ -384,10 +399,11 @@
 }
 
 @supports (
-  (-webkit-text-stroke: 1px var(--main-color)) 
+  (-webkit-text-stroke: 1px var(--main-color)) or
+    (text-stroke: 1px var(--main-color))
 ) {
   .img-section__label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--main-color)
+    -webkit-text-stroke: 1px var(--main-color);
   }
 }

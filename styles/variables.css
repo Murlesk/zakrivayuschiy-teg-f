@@ -8,6 +8,10 @@
   --accent-color: #000;
   --color-button-text: #fff;
 
+  --transition-button: 0.3s ease;
+  --font-weight-normal: 400;
+  --font-weight-bold: 785;
+
   --color-heart: #f00;
   --color-heart-contour: #000;
 
