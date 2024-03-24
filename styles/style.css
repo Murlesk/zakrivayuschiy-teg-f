@@ -150,7 +150,7 @@
   font-family: var(--font-accent);
   opacity: 50%;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--main-color);
+  text-shadow: 1px 1px var(--main-color), -1px -1px var(--main-color), 1px -1px var(--main-color), -1px 1px var(--main-color);
   z-index: 1;
 }
 
@@ -370,5 +370,14 @@
 
   .dialog[open] {
     width: 341px;
+  }
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--main-color)) 
+) {
+  .img-section__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--main-color)
   }
 }
