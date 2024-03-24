@@ -1,7 +1,7 @@
 :root.theme-light {
   --main-color: #fff;
   --accent-color: #000;
-  --color-like-text: #fff;
+  --color-button-text: #fff;
   --color-heart-contour: #000;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
@@ -11,7 +11,7 @@
 :root.theme-dark {
   --main-color: #000;
   --accent-color: #00cc14;
-  --color-like-text: #00cc14;
+  --color-button-text: #00cc14;
   --color-heart-contour: #00cc14;
   --font-weight-normal: 465;
   --font-weight-bold: 785;
@@ -22,7 +22,7 @@
   :root {
     --main-color: #000;
     --accent-color: #00cc14;
-    --color-like-text: #00cc14;
+    --color-button-text: #00cc14;
     --color-heart-contour: #00cc14;
     --font-weight-normal: 465;
     --font-weight-bold: 785;

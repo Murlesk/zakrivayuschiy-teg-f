@@ -178,6 +178,7 @@
   justify-content: end;
   align-items: center;
   padding-inline: 25px;
+  gap: 4px;
 }
 
 .button {
@@ -205,7 +206,7 @@
   font-family: var(--font-accent);
   font-size: 14px;
   mix-blend-mode: difference;
-  color: var(--color-like-text);
+  color: var(--color-button-text);
 }
 
 .card__like-button {
@@ -238,6 +239,7 @@
   transition: border-color 0.3s ease;
   appearance: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -269,7 +271,7 @@
   filter: brightness(0.6);
 }
 .filter_hue-invert {
-  filter: hue-rotate(90deg) invert(75%);;
+  filter: hue-rotate(90deg) invert(75%);
 }
 
 .like-icon {
@@ -279,4 +281,94 @@
 
 .sparks {
   opacity: 0;
+}
+
+.save {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-block-start: 48px;
+  margin-block-end: 100px;
+  align-items: center;
+}
+
+.save-button {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.floppy-icon {
+  block-size: 21px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+
+.dialog__container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__floppy {
+  block-size: 39px;
+  inline-size: 39px;
+  mix-blend-mode: difference;
+  flex: none;
+}
+
+.dialog__button {
+  width: 100%;
+  height: 38px;
+}
+
+.dialog__text {
+  color: var(--accent-color);
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  line-height: 21px;
+}
+
+.dialog[open] {
+  display: flex;
+  width: 357px;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: var(--main-color);
+  border: 2px solid var(--accent-color);
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media (width < 376px) {
+  .save-button {
+    flex-direction: column;
+  }
+
+  .floppy-icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .card__title {
+    line-height: 1.2rem;
+  }
+
+  .img-section__label {
+    top: 19px;
+    right: 10px;
+  }
+
+  .dialog[open] {
+    width: 341px;
+  }
 }
