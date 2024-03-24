@@ -300,6 +300,16 @@
   gap: 8px;
 }
 
+.save-button:focus {
+  outline: none;
+}
+
+.save-button:focus-visible {
+  outline: none;
+  transition: 0.5s ease;
+  box-shadow: 2px 2px var(--accent-color);
+}
+
 .floppy-icon {
   block-size: 21px;
   inline-size: 21px;
