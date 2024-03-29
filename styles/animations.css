@@ -97,7 +97,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart);
-  animation: fill 0.3s 00.6s linear;
+  animation: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .heart {

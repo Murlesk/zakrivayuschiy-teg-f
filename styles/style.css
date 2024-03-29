@@ -72,12 +72,12 @@
   font-size: 14px;
   position: relative;
   padding: 0;
+  transition: var(--transition-button);
 }
 
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 60%;
-  transition: var(--transition-button);
 }
 
 .theme-menu__button:disabled {
@@ -108,7 +108,7 @@
   background-color: var(--accent-color);
   scale: 0;
   transform-origin: left;
-  transition: 0.3s;
+  transition: var(--transition-button);
 }
 
 .theme-menu__button:focus-visible::after {
@@ -196,6 +196,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: var(--transition-button);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px var(--accent-color);
 }
 
 .button::before {
@@ -225,26 +236,12 @@
   height: 38px;
 }
 
-.card__like-button:hover {
-  cursor: pointer;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  outline: none;
-  transition: var(--transition-button);
-  box-shadow: 2px 2px var(--accent-color);
-}
-
 .card__icon-button {
   display: flex;
   height: 38px;
   background: var(--accent-colory);
   border: 2px solid transparent;
-  transition: border-color var(--transition-button);
+  transition: var(--transition-button);
   appearance: none;
   cursor: pointer;
   padding: 0;
@@ -303,26 +300,6 @@
 .save-button {
   padding: 15px 20px;
   gap: 8px;
-}
-
-.save-button:focus {
-  outline: none;
-}
-
-.save-button:focus-visible {
-  outline: none;
-  transition: var(--transition-button);
-  box-shadow: 2px 2px var(--accent-color);
-}
-
-.dialo__button:focus {
-  outline: none;
-}
-
-.dialog__button:focus-visible {
-  outline: none;
-  transition: var(--transition-button);
-  box-shadow: 2px 2px var(--accent-color);
 }
 
 .floppy-icon {
@@ -405,5 +382,6 @@
   .img-section__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-color);
+    text-stroke: 1px var(--main-color);
   }
 }
